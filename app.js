@@ -13,8 +13,6 @@ smallDiv.style.height = "24px";
 smallDiv.style.border = "red 5px solid";
 
 //Creating the grid
-for (let i = 0; i < 16; i++) {
-  for (let i = 0; i < 16; i++) {
-    content.appendChild(smallDiv.cloneNode(true));
-  }
+for (let i = 0; i < 256; i++) {
+  content.appendChild(smallDiv.cloneNode(true));
 }
