@@ -13,7 +13,7 @@ board.style.gridTemplateRows = "repeat(16 , 1fr)";
 
 // Function to change when hover
 function changeWhenHover(item) {
-  item.style.background = "red";
+  item.style.background = "black";
   console.log("hi");
 }
 
@@ -22,7 +22,7 @@ function changeWhenHover(item) {
 for (let i = 0; i < 256; i++) {
   // Div System
   const div = document.createElement("div");
-  div.style.background = "green";
+  div.style.background = "white";
   div.addEventListener("mouseenter", function () {
     changeWhenHover(div);
   });
