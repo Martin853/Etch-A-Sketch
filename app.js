@@ -83,16 +83,26 @@ function changeWhenHover(item) {
 }
 
 // Adding The Divs
+function createGrid() {
+  for (let i = 0; i < 256; i++) {
+    // Div System
+    const div = document.createElement("div");
+    div.style.background = "white";
+    div.classList.add("board-item");
+    div.addEventListener("mouseenter", function () {
+      changeWhenHover(div);
+    });
 
-for (let i = 0; i < 256; i++) {
-  // Div System
-  const div = document.createElement("div");
-  div.style.background = "white";
-  div.classList.add("board-item");
-  div.addEventListener("mouseenter", function () {
-    changeWhenHover(div);
-  });
-
-  // Adding The Div To The Board
-  board.insertAdjacentElement("beforeend", div);
+    // Adding The Div To The Board
+    board.insertAdjacentElement("beforeend", div);
+  }
 }
+
+createGrid();
+
+// Grid Size
+const small = document.querySelector("#small");
+const medium = document.querySelector("#medium");
+const large = document.querySelector("#large");
+
+function changeToSmall() {}
