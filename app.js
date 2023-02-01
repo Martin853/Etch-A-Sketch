@@ -7,15 +7,13 @@
 const content = document.querySelector(".content");
 const board = document.querySelector(".board");
 
-// Div
-const div = document.createElement("div");
-div.style.background = "green";
-
 // Grid System
-board.style.gridTemplateColumns = "repeat(16, 1fr))";
-board.style.gridTemplateRow = "repeat(16, 1fr))";
+board.style.gridTemplateColumns = "repeat(16 , 1fr)";
+board.style.gridTemplateRows = "repeat(16 , 1fr)";
 
 // Adding The Divs
 for (let i = 0; i < 256; i++) {
+  const div = document.createElement("div");
+  div.style.background = "green";
   board.insertAdjacentElement("beforeend", div);
 }
