@@ -14,3 +14,8 @@ div.style.background = "green";
 // Grid System
 board.style.gridTemplateColumns = "repeat(16, 1fr))";
 board.style.gridTemplateRow = "repeat(16, 1fr))";
+
+// Adding The Divs
+for (let i = 0; i < 256; i++) {
+  board.insertAdjacentElement("beforeend", div);
+}
