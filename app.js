@@ -5,14 +5,3 @@
 
 // Main Variables
 const content = document.querySelector(".content");
-const smallDiv = document.createElement("div");
-
-//Small Div Styling
-smallDiv.style.width = "24px";
-smallDiv.style.height = "24px";
-smallDiv.style.border = "red 5px solid";
-
-//Creating the grid
-for (let i = 0; i < 256; i++) {
-  content.appendChild(smallDiv.cloneNode(true));
-}

@@ -20,10 +20,8 @@
   padding: 1rem 0 1rem 0;
 }
 
-.content {
-  border: black 5px solid;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+.board {
+  width: 500px;
+  height: 50px;
+  display: grid;
 }
