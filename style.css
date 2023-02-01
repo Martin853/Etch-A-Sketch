@@ -47,7 +47,7 @@
 
 .picker-button {
   font-size: 28px;
-  width: 7rem;
+  width: 9rem;
   height: 2em;
 }
 
@@ -88,11 +88,21 @@
   background-color: rgb(49, 49, 49);
 }
 
+.rainbow {
+  background-color: rebeccapurple;
+  border: 2px solid rgb(65, 26, 105);
+}
+
+.rainbow:hover {
+  background-color: rgb(85, 31, 138);
+}
+
 .color-picker {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
   gap: 1rem;
 }
 
@@ -100,5 +110,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   gap: 0.5rem;
 }

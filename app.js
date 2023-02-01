@@ -6,6 +6,7 @@
 // Main Variables
 const content = document.querySelector(".content");
 const board = document.querySelector(".board");
+let rainbowActive = false;
 let color = "black";
 
 // Color Picker Variables
@@ -13,22 +14,32 @@ const red = document.querySelector(".red");
 const green = document.querySelector(".green");
 const yellow = document.querySelector(".yellow");
 const black = document.querySelector(".black");
+const rainbow = document.querySelector(".rainbow");
 
 // Color Picker Clicked
 red.addEventListener("click", function () {
   color = "red";
+  rainbowActive = false;
 });
 
 green.addEventListener("click", function () {
   color = "green";
+  rainbowActive = false;
 });
 
 yellow.addEventListener("click", function () {
   color = "yellow";
+  rainbowActive = false;
 });
 
 black.addEventListener("click", function () {
   color = "black";
+  rainbowActive = false;
+});
+
+rainbow.addEventListener("click", function () {
+  rainbowActive = true;
+  console.log(rainbowActive);
 });
 
 // Grid System
@@ -37,8 +48,12 @@ board.style.gridTemplateRows = "repeat(16 , 1fr)";
 
 // Function to change when hover
 function changeWhenHover(item) {
-  item.style.background = color;
-  console.log("hi");
+  if (rainbowActive == true) {
+    item.style.background =
+      "#" + Math.floor(Math.random() * 16777215).toString(16);
+  } else {
+    item.style.background = color;
+  }
 }
 
 // Adding The Divs
