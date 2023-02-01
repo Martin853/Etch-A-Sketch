@@ -41,8 +41,9 @@
   gap: 4rem;
 }
 
-.color-picker-text {
+.header-text {
   color: black;
+  font-size: 48px;
 }
 
 .picker-button {
@@ -107,9 +108,46 @@
 }
 
 .colors {
+  max-width: 30rem;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   gap: 0.5rem;
+}
+
+.others-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+
+.eraser-button {
+  background-color: white;
+  border: 2px solid black;
+  color: black;
+}
+
+.eraser-button:hover {
+  background-color: rgb(224, 224, 224);
+}
+
+.clear-button {
+  background-color: white;
+  border: 2px solid black;
+  color: black;
+}
+
+.clear-button:hover {
+  background-color: rgb(224, 224, 224);
+}
+
+.other-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }

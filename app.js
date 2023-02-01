@@ -42,6 +42,22 @@ rainbow.addEventListener("click", function () {
   console.log(rainbowActive);
 });
 
+// Others Button + Functionality
+const erase = document.querySelector(".eraser-button");
+const clear = document.querySelector(".clear");
+
+// Erase Function
+function eraseFunction() {
+  color = "white";
+  rainbowActive = false;
+}
+
+erase.addEventListener("click", function () {
+  eraseFunction();
+});
+
+// Clear All Function
+
 // Grid System
 board.style.gridTemplateColumns = "repeat(16 , 1fr)";
 board.style.gridTemplateRows = "repeat(16 , 1fr)";
