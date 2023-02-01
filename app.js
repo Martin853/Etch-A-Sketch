@@ -44,7 +44,7 @@ rainbow.addEventListener("click", function () {
 
 // Others Button + Functionality
 const erase = document.querySelector(".eraser-button");
-const clear = document.querySelector(".clear");
+const clear = document.querySelector(".clear-button");
 
 // Erase Function
 function eraseFunction() {
@@ -57,6 +57,16 @@ erase.addEventListener("click", function () {
 });
 
 // Clear All Function
+function clearAllFunction() {
+  let allDivs = document.querySelectorAll(".board-item");
+  for (let i = 0; i < allDivs.length; i++) {
+    allDivs[i].style.background = "white";
+  }
+}
+
+clear.addEventListener("click", function () {
+  clearAllFunction();
+});
 
 // Grid System
 board.style.gridTemplateColumns = "repeat(16 , 1fr)";
@@ -78,6 +88,7 @@ for (let i = 0; i < 256; i++) {
   // Div System
   const div = document.createElement("div");
   div.style.background = "white";
+  div.classList.add("board-item");
   div.addEventListener("mouseenter", function () {
     changeWhenHover(div);
   });
