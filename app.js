@@ -83,7 +83,68 @@ function changeWhenHover(item) {
 }
 
 // Adding The Divs
-function createGrid() {
+for (let i = 0; i < 256; i++) {
+  // Div System
+  const div = document.createElement("div");
+  div.style.background = "white";
+  div.classList.add("board-item");
+  div.addEventListener("mouseenter", function () {
+    changeWhenHover(div);
+  });
+
+  // Adding The Div To The Board
+  board.insertAdjacentElement("beforeend", div);
+}
+
+// Grid Size
+const small = document.querySelector("#small");
+const medium = document.querySelector("#medium");
+const large = document.querySelector("#large");
+
+// Small button function
+function changeToSmallGrid() {
+  // Declaring Variables
+  let board = document.querySelector(".board");
+  let allItems = document.querySelectorAll(".board-item");
+
+  // Changing the board grid
+  board.style.gridTemplateColumns = "repeat(8 , 1fr)";
+  board.style.gridTemplateRows = "repeat(8 , 1fr)";
+
+  // Removing the items
+  for (let i = 0; i < allItems.length; i++) {
+    allItems[i].remove();
+  }
+
+  for (let i = 0; i < 64; i++) {
+    // Div System
+    const div = document.createElement("div");
+    div.style.background = "white";
+    div.classList.add("board-item");
+    div.addEventListener("mouseenter", function () {
+      changeWhenHover(div);
+    });
+
+    // Adding The Div To The Board
+    board.insertAdjacentElement("beforeend", div);
+  }
+}
+
+// Medium button function
+function changeToMediumGrid() {
+  // Declaring Variables
+  let board = document.querySelector(".board");
+  let allItems = document.querySelectorAll(".board-item");
+
+  // Changing the board grid
+  board.style.gridTemplateColumns = "repeat(16 , 1fr)";
+  board.style.gridTemplateRows = "repeat(16 , 1fr)";
+
+  // Removing the items
+  for (let i = 0; i < allItems.length; i++) {
+    allItems[i].remove();
+  }
+
   for (let i = 0; i < 256; i++) {
     // Div System
     const div = document.createElement("div");
@@ -98,11 +159,36 @@ function createGrid() {
   }
 }
 
-createGrid();
+// Large button function
+function changeToLargeGrid() {
+  // Declaring Variables
+  let board = document.querySelector(".board");
+  let allItems = document.querySelectorAll(".board-item");
 
-// Grid Size
-const small = document.querySelector("#small");
-const medium = document.querySelector("#medium");
-const large = document.querySelector("#large");
+  // Changing the board grid
+  board.style.gridTemplateColumns = "repeat(32 , 1fr)";
+  board.style.gridTemplateRows = "repeat(32 , 1fr)";
 
-function changeToSmall() {}
+  // Removing the items
+  for (let i = 0; i < allItems.length; i++) {
+    allItems[i].remove();
+  }
+
+  for (let i = 0; i < 1024; i++) {
+    // Div System
+    const div = document.createElement("div");
+    div.style.background = "white";
+    div.classList.add("board-item");
+    div.addEventListener("mouseenter", function () {
+      changeWhenHover(div);
+    });
+
+    // Adding The Div To The Board
+    board.insertAdjacentElement("beforeend", div);
+  }
+}
+
+// Button event listener
+small.addEventListener("click", changeToSmallGrid);
+medium.addEventListener("click", changeToMediumGrid);
+large.addEventListener("click", changeToLargeGrid);
