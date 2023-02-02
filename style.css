@@ -15,6 +15,7 @@
 }
 
 .nav {
+  width: 100%;
   background-color: #011627;
   display: flex;
   justify-content: center;
@@ -178,8 +179,6 @@
 }
 
 footer {
-  position: sticky;
-  top: 100%;
   background-color: #011627;
   margin-top: 3rem;
   height: 10vh;
@@ -192,4 +191,89 @@ footer {
   color: white;
   font-weight: bold;
   font-size: 32px;
+}
+
+@media (max-width: 430px) {
+  .board {
+    width: 250px;
+    height: 250px;
+  }
+
+  .content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .picker-button {
+    font-size: 20px;
+    width: 5.5rem;
+    height: 2em;
+  }
+
+  .footer-text {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 431px) and (max-width: 780px) {
+  .board {
+    width: 300px;
+    height: 300px;
+  }
+
+  .content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .picker-button {
+    font-size: 24px;
+    width: 9rem;
+    height: 2.5em;
+  }
+
+  .footer-text {
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 781px) and (max-width: 2561px) {
+  .board {
+    width: 300px;
+    height: 300px;
+  }
+
+  .content {
+    width: 100%;
+    padding-bottom: 2rem;
+  }
+
+  .picker-button {
+    font-size: 24px;
+    width: 9rem;
+    height: 2.5em;
+  }
+
+  .footer-text {
+    font-size: 24px;
+  }
+
+  html {
+    height: 100%;
+  }
+
+  body {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  footer {
+    margin-top: auto;
+  }
 }
