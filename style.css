@@ -245,8 +245,8 @@ footer {
 
 @media (min-width: 781px) and (max-width: 2561px) {
   .board {
-    width: 300px;
-    height: 300px;
+    width: 350px;
+    height: 350px;
   }
 
   .content {
