@@ -1,6 +1,6 @@
 # Etch-A-Sketch
 
-<h2>A simple project for The Odin Project about creating a rock paper scissors game.</h2>
+<h2>A simple project for The Odin Project about creating an etch a sketch game.</h2>
 <p>In this project i learned to use the grid system and i also used technologies like flexbox. Also i made the site responsive."
 <p><a href="https://martin853.github.io/Etch-A-Sketch/">Link to website</a><p>
 
